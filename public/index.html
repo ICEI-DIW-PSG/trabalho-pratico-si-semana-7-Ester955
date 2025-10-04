@@ -1,13 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minas Gerais</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+ 
+
 <body>
-    <h1>Olá mundo</h1>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top top-0 start-0 w-100 text-white py-4 bg-dark bg-opacity-50" style="z-index: 10;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="imagens/Logo.png" alt="Logo" class="img-fluid" style="width: 90px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav gap-3 fs-5 fw-bold">
+        <!--Detalhes-->
+        <li class="nav-item"><a class="nav-link text-white" href="\public\detalhes.html\detalhes.html">Detalhes</a></li>
+        <!---->
+        <li class="nav-item"><a class="nav-link text-white" href="#">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Cultura</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Energia</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Contato</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Artesanato</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Culinária</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">História</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Turismo</a></li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <div class="btn-group" role="group">
+        <a href="#" class="btn btn-outline-light btn-sm">Login</a>
+        <a href="#" class="btn btn-outline-light btn-sm">Cadastro</a>
+      </div>
+      <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<!-- BANNER -->
+<style>
+.main-carousel-img {
+  transition: transform 6s ease;
+}
+
+.carousel-item.active .main-carousel-img {
+  transform: scale(1.1);
+}
+</style>
+
+<div id="carouselMinas" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
+  <div class="carousel-inner" style="height: 90vh;">
+    
+    <div class="carousel-item active">
+      <img src="imagens/Mg.jpeg" class="img-fluid w-100 main-carousel-img" style="height: 90vh; object-fit: cover;" alt="Minas Gerais">
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="display-3 fw-bold">A Beleza de Minas Gerais</h1>
+        <p class="fs-4">Tradição, natureza e hospitalidade em cada detalhe.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagens/comida2.jpg" class="img-fluid w-100 main-carousel-img" style="height: 90vh; object-fit: cover;" alt="Comida Mineira">
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="display-4 fw-bold">Sabores de Minas</h1>
+        <p class="fs-4">Doce de leite, pão de queijo e a cozinha que acolhe.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagens/Mg2.jpeg" class="img-fluid w-100 main-carousel-img" style="height: 90vh; object-fit: cover;" alt="Turismo Minas">
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="display-4 fw-bold">Cidades Históricas</h1>
+        <p class="fs-4">Ouro Preto, Tiradentes e Mariana — joias do barroco.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagens/Mg3.jpeg" class="img-fluid w-100 main-carousel-img" style="height: 90vh; object-fit: cover;" alt="Artesanato">
+      <div class="position-absolute top-50 start-50 translate-middle text-center text-white bg-dark bg-opacity-50 p-4 rounded">
+        <h1 class="display-4 fw-bold">Cultura e Arte</h1>
+        <p class="fs-4">Artesanato, música e fé que revelam a alma mineira.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselMinas" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselMinas" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+  </button>
+</div>
+
+
+<!--DESTAQUE-->
+<section id="Fundo-item" class="py-5 text-dark position-relative"
+  style="background: linear-gradient(rgba(0, 0, 0, 0.2)), 
+         url('imagens/OP.jpg') no-repeat center center;
+         background-size: cover;">
+
+<div class="container-fluid px-5 position-relative" style="z-index: 2;">
+    <h2 class="fw-bolder display-4 text-center text-dark mb-4">Destaques de Minas</h2>
+
+    <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+      
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4 justify-content-center">
+            
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/paodequeijo.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Pão de Queijo">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Culinária Mineira</h6>
+                  <small class="text-muted">Sabores que acolhem</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/ouropreto.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Ouro Preto">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Cidades Históricas</h6>
+                  <small class="text-muted">Barroco e tradição</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/cachoeira.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Cachoeira">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Natureza</h6>
+                  <small class="text-muted">Trilhas e cachoeiras</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/artesanato.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Artesanato">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Artesanato</h6>
+                  <small class="text-muted">Feito à mão</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/cafe.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Café">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Café Mineiro</h6>
+                  <small class="text-muted">Tradição em cada grão</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/historia.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Serra do Cipó">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">História</h6>
+                  <small class="text-muted">Resumo e História de Minas Gerais</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4 justify-content-center">
+            
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/cultura.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Festas">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Festas e Cultura</h6>
+                  <small class="text-muted">Congados e tradições</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/PicodaBandeira.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Montanhas">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Montanhas</h6>
+                  <small class="text-muted">Horizontes de Minas</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/Serro.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Roteiros">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Roteiros Imperdíveis</h6>
+                  <small class="text-muted">Vilarejos e paisagens</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/januária.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Parques">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Parques Naturais</h6>
+                  <small class="text-muted">Preservação e lazer</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/mapa.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Minas 360">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Minas 360°</h6>
+                  <small class="text-muted">Explore cada canto</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card border-0 shadow-sm h-100">
+                <img src="imagens/queijo.jpeg" class="card-img-top" style="height:300px; object-fit:cover;" alt="Mapa">
+                <div class="card-body text-center">
+                  <h6 class="fw-bold mb-0">Queijos</h6>
+                  <small class="text-muted">Tradição que alimenta gerações</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="d-flex justify-content-between mt-4 px-5">
+        <button class="btn btn-outline-dark" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+          ← Anterior
+        </button>
+        <button class="btn btn-outline-dark" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+          Próximo →
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--DESTAQUE2-->
+  <section class="py-5 text-center text-white my-5" style="background: url('imagens/serradocipo.jpg') center center / cover no-repeat;">
+      <div class="container bg-dark bg-opacity-75 py-5 rounded">
+          <h2 class="fw-bold mb-4">Conheça mais sobre Minas Gerais</h2>
+          <p class="lead mb-5">Explore trilhas, cachoeiras e paisagens deslumbrantes que revelam a beleza intocada de Minas Gerais.</p>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                  <div class="card h-100 border-0 shadow-sm bg-light text-dark">
+                      <img src="imagens/download.jpeg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Culinária Mineira">
+                      <div class="card-body">
+                          <h5 class="card-title fw-bold">Território</h5>
+                          <p class="card-text">Conheça a Geografia de Minas Gerais.</p>
+                         <a href="\public\detalhes.html\detalhes.html" class="btn btn-outline-dark">Ver mais</a>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 border-0 shadow-sm bg-light text-dark">
+                      <img src="imagens/bh.jpeg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Ouro Preto">
+                      <div class="card-body">
+                          <h5 class="card-title fw-bold">Belo Horizonte</h5>
+                          <p class="card-text">Conheça sobre a capital de Minas Gerais, Belo Horizonte</p>
+                         <a href="\public\detalhes.html\detalhes.html" class="btn btn-outline-dark">Ver mais</a>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card h-100 border-0 shadow-sm bg-light text-dark">
+                      <img src="imagens/pele.jpeg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Natureza">
+                      <div class="card-body">
+                          <h5 class="card-title fw-bold">Figuras Destaques</h5>
+                          <p class="card-text">Conheça figuras que representam a mineiridade pelo Brasil afora.</p>
+                         <a href="\public\detalhes.html\detalhes.html" class="btn btn-outline-dark">Ver mais</a>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+</section>
+
+
+<!-- RODAPÉ -->
+   <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container text-center">
+        <img src="imagens/Logo.png" alt="Logo" class="img-fluid mb-3" style="max-height: 150px;">
+        <h5 class="fw-bold">Minas Gerais Sustentável</h5>
+        <p class="fst-italic mb-3">Aqui o trem prospera.</p>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+        </div>
+        <div class="mt-4 border-top border-secondary pt-3">
+            <p><small>© 2025 Minas Gerais Sustentável. Todos os direitos reservados.</small></p>
+            <p><small>Desenvolvido por Saia do Samba LTDA.</small></p>
+        </div>
+        <div class="d-flex justify-content-end pe-3 mt-2">
+            <a href="#" class="text-white"><i class="bi bi-arrow-up-circle-fill fs-4"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
